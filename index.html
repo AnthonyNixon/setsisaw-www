@@ -1,0 +1,41 @@
+<html ng-app="setsisaw">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/" />
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.19/angular-material.css" />
+    <link rel="stylesheet" type="text/css" href="src/style/style.css" />
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-cookies.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.19/angular-material.js"></script>
+
+    <!-- Your application bootstrap  -->
+    <script src="src/app.js"></script>
+    <script src="src/services/authentication.svc.js"></script>
+    <script src="src/login/login.ctrl.js"></script>
+    <script src="src/home/home.ctrl.js"></script>
+</head>
+<body>
+<!--
+  Your HTML content here
+-->
+
+
+<div class="wrapper">
+    <md-toolbar layout="row" class="header">
+        <h1>Sets I Saw</h1>
+        <md-button>blah</md-button>
+    </md-toolbar>
+    <div ng-view class="contentDiv"></div>
+</div>
+</body>
+</html>
