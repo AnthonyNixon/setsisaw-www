@@ -1,1 +1,18 @@
 <h1>Welcome to Sets I Saw!</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Artist</th>
+            <th>Location</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="set in sets">
+            <td>{{set.artist_name}}</td>
+            <td>{{set.location_name}}</td>
+            <td>{{set.metadata.rating}}</td>
+        </tr>
+    </tbody>
+</table>
