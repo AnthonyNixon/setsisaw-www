@@ -13,7 +13,7 @@ function Service($http, $rootScope) {
 
     function GetUserSets(callback) {
         $http.get('https://api.setsisaw.com/sets', {
-            headers: {'Authorization': 'Bearer ' + $rootScope.globals.currentUser.authdata}
+            headers: {'Authorization': 'Bearer ' + $rootScope.globals.token}
         })
             .then(function (response) {
                 // login successful if there's a token in the respon
