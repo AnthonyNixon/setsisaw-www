@@ -4,7 +4,7 @@ angular
     .module('setsisaw')
     .factory('SetsService', Service);
 
-function Service($http) {
+function Service($http, $rootScope) {
     var service = {};
 
     service.GetUserSets = GetUserSets;
@@ -12,7 +12,9 @@ function Service($http) {
     return service;
 
     function GetUserSets(callback) {
-        $http.get('https://api.setsisaw.com/sets')
+        $http.get('https://api.setsisaw.com/sets', {
+            headers: {'Authorization': 'Bearer ' + $rootScope.globals.currentUser.authdata}
+        })
             .then(function (response) {
                 // login successful if there's a token in the respon
                 console.log("Response", response);
